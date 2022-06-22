@@ -16,6 +16,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import BrowseScreen from '../screens/BrowseScreen';
 import AddScreen from '../screens/AddScreen';
+import CameraScreen from '../screens/CameraScreen';
 import OutfitScreen from '../screens/OutfitScreen'
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -40,10 +41,26 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
-      </Stack.Group>
+      <Stack.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Add"
+        component={AddScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Browse"
+        component={BrowseScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Outfit"
+        component={OutfitScreen}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }
@@ -73,10 +90,10 @@ function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Add"
-        component={AddScreen}
+        name="Camera"
+        component={CameraScreen}
         options={{
-          title: "Add",
+          title: "Camera",
           headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}

@@ -25,6 +25,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               AddScreen: 'Add',
             },
           },
+          Camera: {
+            screens: {
+              CameraScreen: 'Camera',
+            },
+          },
           Outfit: {
             screens: {
               OutfitScreen: 'Outfit',

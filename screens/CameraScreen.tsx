@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
-import { RootStackScreenProps } from '../types';
+import { Camera, CameraType } from 'expo-camera';
+import { RootTabScreenProps } from '../types';
 
-export default function App({ navigation }: RootStackScreenProps<'Add'>) {
+export default function App({ navigation }: RootTabScreenProps<'Camera'>) {
   return (
     <View>
     </View>
   );
 }
+
+
 
 const styles = StyleSheet.create({
 });

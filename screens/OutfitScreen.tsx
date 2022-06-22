@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { RootTabScreenProps } from '../types';
 
-export default function App({ navigation }: RootTabScreenProps<'Outfit'>) {
+export default function OutfitScreen({ navigation }: RootTabScreenProps<'Outfit'>) {
   return (
     <View>
     </View>
